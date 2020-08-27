@@ -1,0 +1,47 @@
+# translations/messages+intl-icu.fr.yaml
+# translations de navbar
+header:
+    index: Super Simplon Bros
+    create: Creer un niveau
+    mine: Mon niveau
+    construction: (En construction)
+    btnConnexion: Connexion
+    btnInscription: Inscription
+    btnDeconnexion: Deconnexion
+
+home:
+    welcome: Bienvenue sur mon projet chef-d'oeuvre
+    controller: Controle
+    jump: Sauter / Espace
+    left: Gauche / Q
+    right: Droite / D
+    run: Courir / S
+# translations de formulaire enregistrement en anglais
+form_inscription:
+    title: inscription sur le site
+    username: pseudo
+    placeholder_username: Nom de famille
+    lastname: Nom de famille
+    placeholder_lastname: last name
+    firstname: Prénom
+    placeholder_firstname: Prénom
+    email: email
+    placeholder_email: exemple@gmail.com
+    adress: adresse
+    placeholder_adress: adresse
+    city: ville
+    placeholder_city: ville
+    country: pays
+    placeholder_country: pays
+    password: Mot de passe
+    placeholder_password: Mot de passe
+    password_confirm: Confirmation du mot de passe
+    placeholder_password_confirm: Répétez votre mot de passe
+    btn_registration: inscription
+# translations de login  en francais
+
+login:
+    title:  Veuillez vous connecter
+    username: pseudo
+    password: mot de passe
+    btn_login: connexion

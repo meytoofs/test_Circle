@@ -1,0 +1,96 @@
+# translations/messages+intl-icu.en.yaml
+# translation of navbar
+header:
+    index: Super Simplon Bros
+    create: Create a level
+    mine: My level
+    construction: (Under constructed)
+    btnConnexion: Login
+    btnInscription: Register
+    btnDeconnexion: Logout
+
+home:
+    welcome: Welcome to my WebSite
+    controller: Controller
+    jump: Jump / Espace
+    left: Left / A
+    right: Right / D
+    run: Run / S
+chat:
+    chatHeader: Welcome to our chat ! 
+    chatHeader2: Rules of the chat.
+    btnChatLogout: Go to the chat logout
+    regles: Rules
+
+chat_room:
+    list_room: List of Rooms
+    tab_nom: Name of the Room
+    tab_type: Type of Room
+    tab_number: Number of User connected
+    tab_heure: Last message
+    btn_creer: Create room
+
+form_chat:
+    title: Create new room
+    nom_room: Name of the Room*
+    type_room: Type of the Room*
+    btnSave: Save
+    btnBack: Back to the list of rooms
+    placeholder_nom: Exemple/ My genius idea
+    placeholder_type: Debate / Fun / Other..
+
+message_form:
+    placeholder: your message
+    submit: Send
+    
+# translations de formulaire enregistrement en anglais
+
+form_inscription:
+    title: the inscription in the site
+    username: username
+    placeholder_username: username
+    lastname: last name
+    placeholder_lastname: last name
+    firstname: first name
+    placeholder_firstname: first name
+    email: email
+    placeholder_email: exemple@gmail.com
+    adress: adress
+    placeholder_adress: adress
+    city: city
+    placeholder_city: city
+    country: country
+    placeholder_country: country
+    password: password
+    placeholder_password: password
+    password_confirm: password_confirm
+    placeholder_password_confirm: please repeat your password
+    btn_registration: register
+# translations de login  en anglais
+login:
+    title:  Please sign in
+    username: Username
+    password: password
+    btn_login: Sign in
+
+idea_index:
+    title: All Ideas create by our Beautiful Community
+    no_result: no result found :(
+
+quentin_card:
+    readme: Read More
+
+form_search:
+    placeholder: Search an idea
+    btn_create: Create an idea
+    submit: Filter
+    tri: Latest Idea !
+
+idea_show:
+    creator: Créator
+    total_score: Score
+    construct: Construct
+    construct_def: You will find early Soon here the chat Room of this Idea !
+    btn_chat: Going To chat!
+    btn_back: Back
+    btn_edit: Edit
