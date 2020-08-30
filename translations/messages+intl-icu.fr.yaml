@@ -39,9 +39,19 @@ form_inscription:
     placeholder_password_confirm: Répétez votre mot de passe
     btn_registration: inscription
 # translations de login  en francais
+form_search:
+    placeholder: Rechercher un niveau
+    tri: Les derniers niveaux 
+    submit: Rechercher
 
 login:
     title:  Veuillez vous connecter
     username: pseudo
     password: mot de passe
     btn_login: connexion
+
+quentin_card:
+    readme: Jouez au niveau
+
+level:
+    title: Niveau de la communaute

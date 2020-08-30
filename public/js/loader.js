@@ -16,11 +16,11 @@ export function loadJSON(url) {
     .then(r => r.json());
 }
 
-export function loadSpriteSheet(name) {
+export function loadSpriteSheet(name) { // marioJSON or levelJSON
     return loadJSON(`/sprites/${name}.json`)
-    .then(sheetSpec => Promise.all([
+    .then(sheetSpec => Promise.all([ //wait the promis of mario and level
         sheetSpec,
-        loadImage(sheetSpec.imageURL),
+        loadImage(sheetSpec.imageURL), //in each json loaded, we have the location of each spritesheet
     ]))
     .then(([sheetSpec, image]) => {
         const sprites = new SpriteSheet(

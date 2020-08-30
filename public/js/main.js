@@ -10,12 +10,12 @@ import getKey from './getKey.js'
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
 
-Promise.all([
+Promise.all([ //wait the promise synchronous
     createMario(),
     loadLevel('1-1'),
 ])
 .then(([mario, level]) => {
-    const camera = new Camera();
+    const camera = new Camera(); //creating camera uses later
     window.camera = camera;
 
     mario.pos.set(64, 64);
@@ -23,7 +23,7 @@ Promise.all([
     // level.comp.layers.push(
     //     createCollisionLayer(level),
     //     createCameraLayer(camera));
-
+    
 
     level.entities.add(mario);
 
@@ -33,26 +33,18 @@ Promise.all([
     //setupMouseControl(canvas, mario, camera);
 
 
-    const timer = new Timer(1/60);
+    const timer = new Timer(1/60); // split 1 second into 60 frames
     timer.update = function update(deltaTime) {
-        level.update(deltaTime);
+        level.update(deltaTime); //use timer and requestAnimationFrame for drawing 60 * per second 
 
         if(mario.pos.x > 100) {
-            camera.pos.x = mario.pos.x -100;
+            camera.pos.x = mario.pos.x -100; //setting up camera who follows mario when he reach a certain amount of canvas x
         }
 
         level.comp.draw(context, camera);
     }
 
-    timer.start();
-});
-document.body.addEventListener('keydown', function (e) {
-    var key = getKey(e);
-    if (!key) {
-        return console.warn('No key for', e.keyCode);
-    }
-
-    key.setAttribute('data-pressed', 'on');
+    timer.start(); //finally , we begin the start of timer for multiple mathematics functionnality
 });
 
 document.body.addEventListener('keydown', function (e) {
@@ -60,7 +52,6 @@ document.body.addEventListener('keydown', function (e) {
     if (!key) {
         return console.warn('No key for', e.keyCode);
     }
-
     key.classList.add('pressed');
 });
 document.body.addEventListener('keyup', function (e) {

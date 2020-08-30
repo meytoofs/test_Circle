@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Niveau de la communauté{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>{{ 'level.title'|trans }}</h1>
+                {% include 'level/_filter.html.twig' with {form: form, min: min, max: max} only%}
+            </div>
+            <div class="col-md-9">
+                <div id="displayDate" class="grid">
+                    {% for level in level %}
+                        {%include 'level/_quentinCard.html.twig' %}
+                    {% else %}
+                </div>
+            </div>
+                <tr>
+                    <p colspan="7">{{ 'idea_index.no_result'|trans }}</p>
+                </tr>
+            {% endfor %}
+        <div style="margin-top: 4rem;">
+            {{ knp_pagination_render(level)}}
+        </div>
+    </div>
+{% endblock %}

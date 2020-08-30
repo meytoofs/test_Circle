@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Level{% endblock %}
+
+{% block body %}
+    <h1>Level</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ level.id }}</td>
+            </tr>
+            <tr>
+                <th>Spritesheet</th>
+                <td>{{ level.Spritesheet ? level.Spritesheet|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ level.title }}</td>
+            </tr>
+            <tr>
+                <th>Total_score</th>
+                <td>{{ level.totalScore }}</td>
+            </tr>
+            <tr>
+                <th>Featured_image</th>
+                <td>{{ level.featuredImage }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('level_index') }}">back to list</a>
+
+    <a href="{{ path('level_edit', {'id': level.id}) }}">edit</a>
+
+    {{ include('level/_delete_form.html.twig') }}
+{% endblock %}

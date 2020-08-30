@@ -48,9 +48,15 @@ class User implements UserInterface
      */
     private $isVerified = false;
 
+    /**
+     * @ORM\OneToMany(targetEntity=NoteHistory::class, mappedBy="user_id")
+     */
+    private $noteHistories;
+
     public function __construct()
     {
         $this->levels = new ArrayCollection();
+        $this->noteHistories = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -170,6 +176,37 @@ class User implements UserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|NoteHistory[]
+     */
+    public function getNoteHistories(): Collection
+    {
+        return $this->noteHistories;
+    }
+
+    public function addNoteHistory(NoteHistory $noteHistory): self
+    {
+        if (!$this->noteHistories->contains($noteHistory)) {
+            $this->noteHistories[] = $noteHistory;
+            $noteHistory->setUserId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNoteHistory(NoteHistory $noteHistory): self
+    {
+        if ($this->noteHistories->contains($noteHistory)) {
+            $this->noteHistories->removeElement($noteHistory);
+            // set the owning side to null (unless already changed)
+            if ($noteHistory->getUserId() === $this) {
+                $noteHistory->setUserId(null);
+            }
+        }
 
         return $this;
     }
