@@ -1,38 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Level{% endblock %}
+{% block title %}{% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
 
 {% block body %}
-    <h1>Level</h1>
+    <div class="container-fluid">
+        <div class="row show_layout">
+            <div class="col-md-3">
+                <img src="{{ level.featuredImage}}" alt="">
+            </div>
+            <div class="col-md-6">
+                <h2>{{ level.title |raw}}</h2>
+            </div>
+            <div class="col-md-3 show_layout">
+                {{ include('level/_voteform.html.twig') }}
+            </div>
+            <div class="col-xs-12">
+                <p> {{ level.content | raw}}</p>
+                <p>Date de publication: {{ level.date|date('d-m-y ') }}</p> 
+            </div>
+        </div>
+        <div class="row justify-content-center">
+        <section class="nes-container is-dark">
+            <section class="message-list">
+                <section class="message -left">
+                    <i class="nes-mario"></i>
+                    <div class="nes-balloon from-left is-dark">
+                    <p>Désolé, cette fonctionnalité n'est pas encore implémenter, vous serez trés vite averti de la possibilité de jouer aux niveau d'autres joueurs.</p>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+    </div>
+        
+    
+            
+    <a href="{{ path('level_index') }}">Revenir Aux niveaux</a>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ level.id }}</td>
-            </tr>
-            <tr>
-                <th>Spritesheet</th>
-                <td>{{ level.Spritesheet ? level.Spritesheet|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ level.title }}</td>
-            </tr>
-            <tr>
-                <th>Total_score</th>
-                <td>{{ level.totalScore }}</td>
-            </tr>
-            <tr>
-                <th>Featured_image</th>
-                <td>{{ level.featuredImage }}</td>
-            </tr>
-        </tbody>
-    </table>
+    {% if is_granted ('edit', level) %} 
 
-    <a href="{{ path('level_index') }}">back to list</a>
-
-    <a href="{{ path('level_edit', {'id': level.id}) }}">edit</a>
-
-    {{ include('level/_delete_form.html.twig') }}
+    <a href="{{ path('level_edit', {'id': level.id}) }}">{{ 'idea_show.btn_edit'|trans }}</a>
+    {% endif %} 
+    {% if is_granted ('delete', level) %} 
+ 
+    {{ include('level/delete_form.html.twig') }}
+    {% endif %} 
+   
 {% endblock %}

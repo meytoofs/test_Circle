@@ -15,16 +15,25 @@ class SearchDataType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('tri',CheckboxType::class,[
-            'label'=>'DERNIER Niveau',
-            'required' => false,
-        
-        ])
         ->add('q', TextType::class, [
             'label' => false,
             'required' => false,
             'attr' => [
                 'placeholder' => 'form_search.placeholder'
+            ]
+        ])
+        ->add('min', NumberType::class, [
+            'label' => false,
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'min'
+            ]
+        ])
+        ->add('max', NumberType::class, [
+            'label' => false,
+            'required' => false,
+            'attr' => [
+                'placeholder' => 'max'
             ]
         ])
         ->add('tri', CheckboxType::class, [

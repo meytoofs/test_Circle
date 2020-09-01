@@ -3,10 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Level;
+use App\Form\VoteType;
 use App\Form\LevelType;
-use App\Form\SearchDataType;
 use App\Data\SearchData;
 use App\Entity\NoteHistory;
+use App\Form\SearchDataType;
 use App\Repository\LevelRepository;
 use App\Repository\NoteHistoryRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -84,9 +85,9 @@ class LevelController extends AbstractController
             $entityManager->flush();
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('idea_proposition_show', ['id' => $id]);
+            return $this->redirectToRoute('level_show', ['id' => $id]);
         }
-        return $this->render('idea_proposition/show.html.twig', [
+        return $this->render('level/show.html.twig', [
             'level' => $level,
             'form' => $form->createView(),
             'total_score' => $total_score,

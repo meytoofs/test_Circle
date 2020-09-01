@@ -29,6 +29,7 @@ body{
     height: auto;
     background-color: black;
     color: white;
+    overflow-wrap: break-word;
 }
 header{
     margin-bottom: 10px;
@@ -393,8 +394,13 @@ canvas {
     left: 42%;
     background: linear-gradient(to right, #313131 0%,#161616 50%,#313131 100%);
 }
+#displayDate{
+    display: flex;
+    flex-wrap: wrap;
+}
 .quentin {
-	width: 100%;
+    width: 46%;
+    margin: 10px;
 }
 .search{
 	height: 100%;
@@ -444,7 +450,7 @@ canvas {
 }
 
 .quentin .card:hover .face.face1 .content img {
-	max-width: 90rem;
+	max-width: 50%;
 }
 .quentin .card .face.face1 .content h2 {
 	margin: 10px 0 0;
@@ -486,12 +492,13 @@ canvas {
 	font-weight: 900;
 	color: #333;
 	padding: 5px;
-	border: 1px solid #333;
+    border: 1px solid #333;
 }
 .quentin .card .face.face2 .content a:hover {
 	background: #333;
 	color: #fff;
-	transition: 0.5s;
+    transition: 0.5s;
+    max-width: 50%;
 }
 .avg{
 	margin: 15px 0 0;
@@ -503,4 +510,41 @@ canvas {
     position: absolute;
     bottom: 0;
     right: 0;
+    max-width: 50%;
+}
+.min-max{
+    justify-content: space-around;
+}
+#min {
+    width: 75%;
+    margin-bottom: 25px;
+}
+#max {
+    width: 75%;
+    margin-bottom: 25px;
+}
+div.face.face1 > div > img{
+    max-width: 50%;
+}
+#q {
+    width: 100%;
+}
+.show_layout{
+    border: 2px solid white;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fd9802;
+    color: black;
+}
+.show_layout div:first-child{
+    padding: 0;
+    margin-bottom: 20px;
+}
+.show_layout div:first-child img{
+    width: 100%;
+}
+.display_game{
+    border: 2px solid white;
+    border-radius: 30px;
+    height: 30%;
 }

@@ -6,18 +6,35 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
+    <div class="nes-container is-dark with-title">
+        <p class="title">{{'form_inscription.title' | trans }}</p>
 
-    <h1>{{'form_inscription.title' | trans }}</h1>
-
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email, {
-            label: 'Email*'
-        }) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Mot de passe*'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        {{ form_start(registrationForm) }}
+            {{ form_row(registrationForm.email, {
+                label: 'Email*'
+            }) }}
+            {{ form_row(registrationForm.pseudo, {
+                label: 'Pseudo*'
+            }) }}
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Mot de passe*'
+            }) }}
+            {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn btn-primary">Register</button>
     {{ form_end(registrationForm) }}
+    </div>
+    <section class="nes-container is-dark with-title">
+    <p class="title">Note</p>
+  <section class="message-list">
+      <section class="message -left">
+        <!-- Balloon -->
+        <div class="nes-balloon from-left is-dark">
+          <p>Un compte vous permettra de créer divers niveau que je me ferais un plaisir de traverser ! Il vous permettra également de partager votre création et vous mesurer a d'autres joueurs</p>
+        </div>
+        <i class="nes-mario"></i>
+      </section>
+    </section>
+  </section>
+</section>
 {% endblock %}

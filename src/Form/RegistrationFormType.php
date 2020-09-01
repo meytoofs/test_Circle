@@ -25,6 +25,10 @@ class RegistrationFormType extends AbstractType
                     'placeholder' => 'form_inscription.placeholder_email',
                 ]
             ])
+            ->add('pseudo', TextType::class, [
+                'required' => true,
+                'label' => 'form_inscription.pseudo',
+            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [

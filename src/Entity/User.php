@@ -53,6 +53,11 @@ class User implements UserInterface
      */
     private $noteHistories;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $pseudo;
+
     public function __construct()
     {
         $this->levels = new ArrayCollection();
@@ -207,6 +212,18 @@ class User implements UserInterface
                 $noteHistory->setUserId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
 
         return $this;
     }

@@ -19,6 +19,20 @@ class NoteHistoryRepository extends ServiceEntityRepository
         parent::__construct($registry, NoteHistory::class);
     }
 
+    public function getAVG($id)
+    {
+        $result = $this
+        ->createQueryBuilder('n')
+        ->select("avg(n.score)")
+        ->where('n.level_id = :id')
+        ->setParameter('id', $id)
+        ->getQuery()
+        ->getSingleResult();
+        if ($result){
+            return $result[1];
+        }
+        return 0;
+    }
     // /**
     //  * @return NoteHistory[] Returns an array of NoteHistory objects
     //  */

@@ -3,7 +3,7 @@
 header:
     index: Super Simplon Bros
     create: Creer un niveau
-    mine: Mon niveau
+    community: Niveau de la communaute
     construction: (En construction)
     btnConnexion: Connexion
     btnInscription: Inscription
@@ -17,6 +17,7 @@ home:
     right: Droite / D
     run: Courir / S
 # translations de formulaire enregistrement en anglais
+
 form_inscription:
     title: inscription sur le site
     username: pseudo
@@ -55,3 +56,5 @@ quentin_card:
 
 level:
     title: Niveau de la communaute
+    filter: Filtre de niveau
+    no_result: Aucun Resultat :(

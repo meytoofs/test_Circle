@@ -1,13 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Niveau de la communauté{% endblock %}
-
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% endblock %}
 {% block body %}
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
                 <h1>{{ 'level.title'|trans }}</h1>
-                {% include 'level/_filter.html.twig' with {form: form, min: min, max: max} only%}
+                <div class="nes-container is-dark with-title">
+                    <p class="title">{{ 'level.filter' | trans}}</p>
+                    {% include 'level/_filter.html.twig' with {form: form, min: min, max: max} only%}
+                </div>
             </div>
             <div class="col-md-9">
                 <div id="displayDate" class="grid">
@@ -17,7 +23,7 @@
                 </div>
             </div>
                 <tr>
-                    <p colspan="7">{{ 'idea_index.no_result'|trans }}</p>
+                    <p colspan="7">{{ 'level.no_result'|trans }}</p>
                 </tr>
             {% endfor %}
         <div style="margin-top: 4rem;">

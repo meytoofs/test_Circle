@@ -3,11 +3,6 @@
     <div class="card">
         <div class="face face1">
             <div class="content">
-
-                {# pour upload  #}
-                {# <img src="{{ vich_uploader_asset(level) }}" /> #}
-                
-                {# pour les fixtures #}
                 <img src="{{ level.featuredImage }}"></img>
                 <h2>{{ level.title | raw}}</h2>
                 <p class="avg">Creer le: {{ level.date |date("d/m/Y")}}</p>
@@ -16,7 +11,7 @@
         <div class="face face2">
             <div class="content">
             <p>{{ level.content | raw }}</p>
-                <a href="{{ path('level_show', {'id': level.id}) }}">{{ 'quentin_card.readme'|trans }} {{ level.title | raw}}</a>
+                <a href="{{ path('level_show', {'id': level.id}) }}">Jouez</a>
                 <p class="avg">note: {{ level.avg }}</p>
             </div>
         </div>

@@ -16,6 +16,16 @@ class SearchData
     public $q = '';
 
     /**
+     * @var null|integer
+     */
+    public $max;
+
+    /**
+     * @var null|integer
+     */
+    public $min;
+
+    /**
      * @var boolean
      */
     public $tri;

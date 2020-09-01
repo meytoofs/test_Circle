@@ -1,9 +1,18 @@
-{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-    {# <a class="btn btn-primary" role="button" href="#" style="margin-top: 10px;">{{ 'form_search.btn_create'|trans }}</a> #}
-{% endif %}
-
 {{ form_start(form, {attr: {class: 'filter'}}) }}
+    <p>Nom du niveau:<p>
     {{ form_row(form.q) }}
+    <p>Score: </p>
+    <div class="row min-max">
+        <div class="col-md-6">
+            {{ form_row(form.min) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.max) }}
+        </div>
+    </div>
+    <div id="price-slider" data-min="{{ min }}" data-max="{{ max }}" style="margin-bottom: 3rem;"></div>
+
+    {{dump(min,max)}}
     {{ form_row(form.tri)}}
     <button type="submit" class="btn btn-primary w-100">{{ 'form_search.submit'|trans }}</button>
 {{ form_end(form) }}
