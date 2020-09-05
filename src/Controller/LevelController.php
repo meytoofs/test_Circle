@@ -2,12 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Level;
 use App\Form\VoteType;
 use App\Form\LevelType;
 use App\Data\SearchData;
 use App\Entity\NoteHistory;
 use App\Form\SearchDataType;
+use App\Form\LevelCreationFormType;
 use App\Repository\LevelRepository;
 use App\Repository\NoteHistoryRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -42,28 +44,31 @@ class LevelController extends AbstractController
         ]);
     }
 
-    // /**
-    //  * @Route("/new", name="level_new", methods={"GET","POST"})
-    //  */
-    // public function new(Request $request): Response
-    // {
-    //     $level = new Level();
-    //     $form = $this->createForm(LevelType::class, $level);
-    //     $form->handleRequest($request);
+    /**
+     * @Route("/new", name="level_new", methods={"GET","POST"})
+     */
+    public function new(Request $request): Response
+    {   
+        $level = new Level();
+        $level->setUserId($this->getUser());
+        $level->setTotalScore(0);
+        $level->setDate(new \DateTime('now'));
+        $form = $this->createForm(LevelCreationFormType::class, $level);
+        $form->handleRequest($request);
 
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //         $entityManager = $this->getDoctrine()->getManager();
-    //         $entityManager->persist($level);
-    //         $entityManager->flush();
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($level);
+            $entityManager->flush();
 
-    //         return $this->redirectToRoute('level_index');
-    //     }
+            return $this->redirectToRoute('level_index');
+        }
 
-    //     return $this->render('level/new.html.twig', [
-    //         'level' => $level,
-    //         'form' => $form->createView(),
-    //     ]);
-    // }
+        return $this->render('level/new.html.twig', [
+            'level' => $level,
+            'form' => $form->createView(),
+        ]);
+    }
 
     /**
      * @Route("/{id}", name="level_show", methods={"GET", "POST"})

@@ -58,6 +58,26 @@ class User implements UserInterface
      */
     private $pseudo;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $first_name;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $last_name;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $adress;
+
     public function __construct()
     {
         $this->levels = new ArrayCollection();
@@ -224,6 +244,58 @@ class User implements UserInterface
     public function setPseudo(string $pseudo): self
     {
         $this->pseudo = $pseudo;
+
+        return $this;
+    }
+    public function __toString(){
+        
+        return $this->pseudo;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->first_name;
+    }
+
+    public function setFirstName(string $first_name): self
+    {
+        $this->first_name = $first_name;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->last_name;
+    }
+
+    public function setLastName(string $last_name): self
+    {
+        $this->last_name = $last_name;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(?string $telephone): self
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(?string $adress): self
+    {
+        $this->adress = $adress;
 
         return $this;
     }

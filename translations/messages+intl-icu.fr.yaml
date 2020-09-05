@@ -20,6 +20,9 @@ home:
 
 form_inscription:
     title: inscription sur le site
+    account: Creation du compte
+    parameter: Parametres du compte
+    personnal_data: Details personnels
     username: pseudo
     placeholder_username: Nom de famille
     lastname: Nom de famille
@@ -39,6 +42,9 @@ form_inscription:
     password_confirm: Confirmation du mot de passe
     placeholder_password_confirm: Répétez votre mot de passe
     btn_registration: inscription
+    major: Avez vous plus de 13 ans?
+    save: Sauvegarder
+    back: Revenir aux niveaux
 # translations de login  en francais
 form_search:
     placeholder: Rechercher un niveau
@@ -58,3 +64,10 @@ level:
     title: Niveau de la communaute
     filter: Filtre de niveau
     no_result: Aucun Resultat :(
+
+level_creation:
+    title: Titre de votre création* : 
+    content: Descriptif du niveau
+    content_placeholder: Ex; Combat de boss
+    spritesheet: Ecrivez votre Niveau
+    spritesheet_placeholder: Format attendu; JSON

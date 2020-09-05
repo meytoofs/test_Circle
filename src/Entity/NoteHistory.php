@@ -18,7 +18,7 @@ class NoteHistory
     private $id;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="integer")
      */
     private $score;
 

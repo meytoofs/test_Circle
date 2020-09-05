@@ -7,12 +7,48 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
+<div class="container-fluid">
+    <div class="row hidden">
+        <div class="col-sm-3">
+            <h1 class="bounce">{{ level.title |raw}}</h1>
+            <p> {{ level.content | raw}}</p>
+            <div class="nes-container is-dark with-title">
+                <p class="title">{{'home.controller' | trans}}</p>
+                <ul>
+                    <li>{{'home.jump' | trans}}</li>
+                    <li>{{'home.left' | trans}}</li>
+                    <li>{{'home.right' | trans}}</li>
+                    <li>{{'home.run' | trans}}</li>
+                </ul>
+            </div>
+            <div class="keymap">
+                <div class="move">
+                    <div class="keydown" data-char="Q">Q</div>
+                    <div class="keydown" data-char="S">S</div>
+                    <div class="keydown" data-char="D">D</div>
+                </div>
+                <div class="move center">
+                    <div class="keydown" data-key= "32" data-char="Space">Space</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 hidden">
+            <div class="gameDisplay">
+                <canvas id="screen" width="640" height="500">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-sm-3">
+        </div>
+    </div>
+</div>
+    {# 
         <div class="row show_layout">
             <div class="col-md-3">
                 <img src="{{ level.featuredImage}}" alt="">
             </div>
             <div class="col-md-6">
+            <p class="avg">note: {{ level.avg }}</p>
                 <h2>{{ level.title |raw}}</h2>
             </div>
             <div class="col-md-3 show_layout">
@@ -35,7 +71,7 @@
             </section>
         </section>
     </section>
-    </div>
+    </div> #}
         
     
             
@@ -49,5 +85,8 @@
  
     {{ include('level/delete_form.html.twig') }}
     {% endif %} 
-   
+{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+<script type="module" src="/js/main.js"></script>
 {% endblock %}

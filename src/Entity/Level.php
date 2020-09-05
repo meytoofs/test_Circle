@@ -135,7 +135,7 @@ class Level
     
     public function setTotalScore(?int $total_score): self
     {
-        $this->total_score = $total_score;
+        $this->total_score = $this->getAvg();
 
         return $this;
     }

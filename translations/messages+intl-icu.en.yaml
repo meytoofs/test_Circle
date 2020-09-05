@@ -20,6 +20,9 @@ home:
 
 form_inscription:
     title: the inscription in the site
+    account: Create your account
+    parameter: Account setup
+    personnal_data: Personnal details
     username: username
     placeholder_username: username
     lastname: last name
@@ -39,6 +42,7 @@ form_inscription:
     password_confirm: password_confirm
     placeholder_password_confirm: please repeat your password
     btn_registration: register
+    major: Are you over 13 ?
 # translations de login  en anglais
 form_search:
     placeholder: Search level
@@ -58,3 +62,10 @@ level:
     title: Community level
     filter: level filter
     no_result: No result :(
+
+level_creation:
+    title: Level Title* : 
+    content: Level description
+    content_placeholder: Ex; Boss Fight
+    spritesheet: Write your level
+    spritesheet_placeholder: Expected format; JSON
