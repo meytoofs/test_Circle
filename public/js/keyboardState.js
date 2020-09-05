@@ -9,6 +9,7 @@ export default class KeyboardState {
         // Holds the callback functions for a key code
         this.keyMap = new Map();
     }
+
     addMapping(code, callback) {
         this.keyMap.set(code, callback);
     }
@@ -17,9 +18,10 @@ export default class KeyboardState {
         const {code} = event;
 
         if (!this.keyMap.has(code)) {
-            //Did not have key mapped
+            // Did not have key mapped.
             return;
         }
+
         event.preventDefault();
 
         const keyState = event.type === 'keydown' ? PRESSED : RELEASED;
@@ -29,10 +31,10 @@ export default class KeyboardState {
         }
 
         this.keyStates.set(code, keyState);
-        //console.log(this.keyStates);
 
         this.keyMap.get(code)(keyState);
     }
+
     listenTo(window) {
         ['keydown', 'keyup'].forEach(eventName => {
             window.addEventListener(eventName, event => {

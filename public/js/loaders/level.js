@@ -1,7 +1,7 @@
 import {Matrix} from '../math.js';
-import Level from '../level.js';
+import Level from '../Level.js';
 import {createBackgroundLayer, createSpriteLayer} from '../layers.js';
-import {loadJSON, loadSpriteSheet} from '../loader.js';
+import {loadJSON, loadSpriteSheet} from '../loaders.js';
 
 export function loadLevel(name) {
     return loadJSON(`/levels/${name}.json`)

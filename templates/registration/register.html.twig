@@ -6,9 +6,19 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-    <!-- <div class="nes-container is-dark with-title"> -->
-        <!-- <p class="title">{{'form_inscription.title' | trans }}</p> -->
 
+    <section class="nes-container is-dark with-title">
+        <p class="title">Note</p>
+        <section class="message-list">
+            <section class="message -left">
+            <!-- Balloon -->
+            <div class="nes-balloon from-left is-dark">
+                <p>Un compte vous permettra de créer divers niveau que je me ferais un plaisir de traverser ! Il vous permettra également de partager votre création et vous mesurer a d'autres joueurs</p>
+            </div>
+            <i class="nes-mario"></i>
+            </section>
+        </section>
+    </section>
         {{ form_start(registrationForm, {'attr': {'id': 'msform'}}) }}
         <ul id="progressbar">
             <li class="active">{{'form_inscription.parameter' | trans}}</li>
@@ -49,20 +59,6 @@
             <input type="button" name="previous" class="previous action-button" value="Previous" />
         {{ form_end(registrationForm) }}
         </fieldset>
-
-    <!-- </div> -->
-    <section class="nes-container is-dark with-title">
-        <p class="title">Note</p>
-        <section class="message-list">
-            <section class="message -left">
-            <!-- Balloon -->
-            <div class="nes-balloon from-left is-dark">
-                <p>Un compte vous permettra de créer divers niveau que je me ferais un plaisir de traverser ! Il vous permettra également de partager votre création et vous mesurer a d'autres joueurs</p>
-            </div>
-            <i class="nes-mario"></i>
-            </section>
-        </section>
-    </section>
 {% endblock %}
 {% block javascripts %}
 {{ parent() }}
