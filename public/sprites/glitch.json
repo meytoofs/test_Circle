@@ -1,9 +1,24 @@
 {
-    "imageURL": "/img/glitch.png",
+    "imageURL": "/img/glitchs.png",
     "frames": [
         {
-            "name": "glitch",
-            "rect": [1, 0, 16, 16]
+            "name": "glitch-1",
+            "rect": [206, 273, 16, 16]
+        },
+        {
+            "name": "glitch-2",
+            "rect": [206, 301, 16, 16]
+        }
+    ],
+
+    "animations": [
+        {
+            "name": "walk",
+            "frameLen": 0.15,
+            "frames": [
+                "glitch-1",
+                "glitch-2"
+            ]
         }
     ]
 }
