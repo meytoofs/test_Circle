@@ -4,3 +4,42 @@
 [0904/095944.778:ERROR:exception_snapshot_win.cc(99)] thread ID 27848 not found in process
 [0904/095944.778:ERROR:exception_snapshot_win.cc(99)] thread ID 17348 not found in process
 [0904/095944.778:ERROR:exception_snapshot_win.cc(99)] thread ID 19624 not found in process
+[0906/013120.797:ERROR:process_reader_win.cc(108)] process 15540 not found
+[0906/013120.643:ERROR:process_info.cc(329)] VirtualQueryEx: Accès refusé. (0x5)
+[0906/013120.800:ERROR:process_reader_win.cc(108)] process 15680 not found
+[0906/013120.797:ERROR:process_reader_win.cc(108)] process 22080 not found
+[0906/013120.797:ERROR:process_reader_win.cc(108)] process 13744 not found
+[0906/013120.634:ERROR:process_info.cc(329)] VirtualQueryEx: Accès refusé. (0x5)
+[0906/013120.800:ERROR:process_reader_win.cc(108)] process 25868 not found
+[0906/013120.801:ERROR:process_reader_win.cc(108)] process 20740 not found
+[0906/013120.797:ERROR:process_reader_win.cc(108)] process 19844 not found
+[0906/013120.797:ERROR:process_reader_win.cc(108)] process 15744 not found
+[0906/013120.881:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0906/013120.638:ERROR:process_info.cc(329)] VirtualQueryEx: Accès refusé. (0x5)
+[0906/013120.881:ERROR:exception_snapshot_win.cc(99)] thread ID 29668 not found in process
+[0906/013120.881:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0906/013120.881:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0906/013120.881:ERROR:exception_snapshot_win.cc(99)] thread ID 19316 not found in process
+[0906/013120.881:ERROR:exception_snapshot_win.cc(99)] thread ID 23220 not found in process
+[0906/013120.881:ERROR:exception_snapshot_win.cc(99)] thread ID 23036 not found in process
+[0906/013120.882:ERROR:exception_snapshot_win.cc(99)] thread ID 29408 not found in process
+[0906/013120.882:ERROR:exception_snapshot_win.cc(99)] thread ID 29748 not found in process
+[0906/013120.882:ERROR:exception_snapshot_win.cc(99)] thread ID 29732 not found in process
+[0906/013120.882:ERROR:exception_snapshot_win.cc(99)] thread ID 22764 not found in process
+[0908/230821.823:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230822.222:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230822.224:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230821.823:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230822.352:ERROR:exception_snapshot_win.cc(99)] thread ID 15772 not found in process
+[0908/230822.352:ERROR:exception_snapshot_win.cc(99)] thread ID 3436 not found in process
+[0908/230822.352:ERROR:exception_snapshot_win.cc(99)] thread ID 26192 not found in process
+[0908/230822.352:ERROR:exception_snapshot_win.cc(99)] thread ID 19940 not found in process
+[0908/230822.551:ERROR:process_info.cc(329)] VirtualQueryEx: Accès refusé. (0x5)
+[0908/230822.552:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0908/230822.552:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentative d’accès à un processus en cours d’arrêt. (0xc000010a)
+[0908/230822.752:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230822.752:ERROR:exception_snapshot_win.cc(99)] thread ID 23492 not found in process
+[0908/230822.935:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230822.936:ERROR:exception_snapshot_win.cc(99)] thread ID 11688 not found in process
+[0908/230822.936:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0908/230822.936:ERROR:exception_snapshot_win.cc(99)] thread ID 22076 not found in process

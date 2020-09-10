@@ -5,7 +5,7 @@ import { loadGlitch } from './entities/glitch.js';
 
 
 export function loadEntities() {
-    const entityFactories = {};
+    const entityFactories = {}; // initialize an empty object
 
     function addAs(name) {
         return factory => entityFactories[name] = factory;

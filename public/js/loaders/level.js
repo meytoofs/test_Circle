@@ -11,7 +11,6 @@ export function loadLevel(name) {
     ]))
     .then(([levelSpec, backgroundSprites]) => {
         const level = new Level();
-
         const mergedTiles = levelSpec.layers.reduce((mergedTiles, layerSpec) => {
             return mergedTiles.concat(layerSpec.tiles);
         }, []);
@@ -26,7 +25,7 @@ export function loadLevel(name) {
 
         const spriteLayer = createSpriteLayer(level.entities);
         level.comp.layers.push(spriteLayer);
-
+        console.log(level);
         return level;
     });
 }

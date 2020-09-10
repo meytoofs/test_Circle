@@ -90,6 +90,7 @@ export function createCollisionLayer(level) {
                 entity.size.x,
                 entity.size.y);
             context.stroke();
+            
         });
 
         resolvedTiles.length = 0;

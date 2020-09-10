@@ -33,7 +33,7 @@ Promise.all([
 
     level.entities.add(mario);
 
-    // level.comp.layers.push(createCollisionLayer(level));
+    //level.comp.layers.push(createCollisionLayer(level));
 
     const input = setupKeyboard(mario);
     input.listenTo(window);

@@ -21,7 +21,7 @@ function changeColor() {
         var innerText = paragraphs[i].innerText;
         var innerTextSplit = innerText.split("");
         paragraphs[i].innerText = ""
-       
+        
         for(var j = 0; j < innerTextSplit.length; j++) {
             // var randomColor = "rgb(" + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ", " + Math.floor((Math.random() * 255) + 1) + ");"
             var randomColor = color[Math.floor(Math.random() * color.length)]
