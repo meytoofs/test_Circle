@@ -4,3 +4,4 @@ App\Entity\level:
     featured_image: http://picsum.photos/id/<numberBetween(200,600)>/290/180
     content: <text(100)>
     date: <dateTimeBetween("-200 days, "now")>
+    total_score: 0

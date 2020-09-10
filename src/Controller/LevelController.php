@@ -88,6 +88,7 @@ class LevelController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($note);
             $entityManager->flush();
+            $level->setTotalScore($total_score);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('level_show', ['id' => $id]);

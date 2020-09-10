@@ -52,12 +52,12 @@ class LevelRepository extends ServiceEntityRepository
     if  (!empty($search->min)) {
         $query = $query
             ->andWhere('l.total_score >= :min')
-            ->setParameter('min', "%{$search->min}%");
+            ->setParameter('min', $search->min);
     }
     if  (!empty($search->max)) {
         $query = $query
             ->andWhere('l.total_score <= :max')
-            ->setParameter('max', "%{$search->max}%");
+            ->setParameter('max', $search->max);
     }
     if  (($search->tri) == 1) {
         $query = $query
@@ -83,12 +83,12 @@ class LevelRepository extends ServiceEntityRepository
     if  (!empty($search->min)) {
         $query = $query
             ->andWhere('l.total_score >= :min')
-            ->setParameter('min', "%{$search->min}%");
+            ->setParameter('min', $search->min);
     }
     if  (!empty($search->max)) {
         $query = $query
             ->andWhere('l.total_score <= :max')
-            ->setParameter('max', "%{$search->max}%");
+            ->setParameter('max', $search->max);
     }
     if  (($search->tri) == 1) {
         $query = $query
