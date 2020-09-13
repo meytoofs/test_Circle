@@ -40,6 +40,7 @@ class LevelController extends AbstractController
             'form' => $form->createView(),
             'min' => $min,
             'max' => $max,
+            'levelIndex' => 'levelNav'
             
         ]);
     }
@@ -67,6 +68,7 @@ class LevelController extends AbstractController
         return $this->render('level/new.html.twig', [
             'level' => $level,
             'form' => $form->createView(),
+            'currentLevelCreation' => 'currentLevel',
         ]);
     }
 

@@ -40,9 +40,11 @@ nav{
 nav a{
     font-size: 1.2rem;
     transition: 0.4s;
+    padding: 10px;
 }
 nav a:hover{
     background-color: black;
+    border-radius: 30px;
     color: white;
 }
 a{
@@ -747,4 +749,8 @@ div.face.face1 > div > img{
 }
 #msform > fieldset:nth-child(3) > div:nth-child(7) > div > label{
     color: black;
+}
+.navActive{
+    background-color: black;
+    border-radius: 30px;
 }

@@ -15,7 +15,6 @@ Promise.all([
     loadLevel('1-1'),
 ])
 .then(([entity, level]) => {
-    console.log(entity);
 
     const camera = new Camera();
     window.camera = camera;
@@ -37,7 +36,6 @@ Promise.all([
 
     const input = setupKeyboard(mario);
     input.listenTo(window);
-
     const timer = new Timer(1/60);
     timer.update = function update(deltaTime) {
         level.update(deltaTime);

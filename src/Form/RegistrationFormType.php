@@ -90,9 +90,9 @@ class RegistrationFormType extends AbstractType
                             ],
                         ])
                         ->add('save', SubmitType::class, [
-                            // 'attr' => [
-                            //     'class' => 'submit action-button'
-                            // ]
+                            'attr' => [
+                                'value' => 'Enregistrer'
+                            ]
                         ])
                         ;
     }

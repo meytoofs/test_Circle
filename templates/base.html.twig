@@ -8,7 +8,7 @@
         {% block stylesheets %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-        <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+        <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet">
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
@@ -20,15 +20,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" id="mario_logo" href="{{ path('home') }}"title="Accueil">{{ 'header.index'|trans }}</a>
+                    <a class="navbar-brand {% if currentHome is defined and currentHome == "home"%} navActive {% endif%} " id="mario_logo" href="{{ path('home') }}"title="Accueil">{{ 'header.index'|trans }}</a>
                     {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('level_new')}}" title="{{'header.create' | trans}}">{{'header.create' | trans}}</a>
+                            <a class="nav-link {% if currentLevelCreation is defined and currentLevelCreation == "currentLevel"%} navActive {% endif%}" href="{{ path('level_new')}}" title="{{'header.create' | trans}}">{{'header.create' | trans}}</a>
                         </li>
                         <li>
-                            <a class="nav-link" href={{ path ('level_index') }} title="{{'header.community' | trans}}"> {{'header.community' | trans}}</a>
+                            <a class="nav-link {% if levelIndex is defined and levelIndex == "levelNav"%} navActive {% endif%} " href={{ path ('level_index') }} title="{{'header.community' | trans}}"> {{'header.community' | trans}}</a>
                         </li>
                     </ul>
                     <div class="d-flex flex-row-reverse bd-highlight">
